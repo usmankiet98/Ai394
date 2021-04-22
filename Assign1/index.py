@@ -58,3 +58,18 @@ output = Dense(digits_count, activation='softmax', name = "Output_Layer")(x)
 
 model = Model(Inp, output)
 model.summary()
+
+learning_rate = 0.1
+training_epochs = 20
+batch_size = 100
+sgd = optimizers.SGD(lr=learning_rate)
+
+model.compile(loss='categorical_crossentropy',
+              optimizer='sgd',
+              metrics=['accuracy'])
+
+history_one = model.fit(X_train, y_train,
+                     batch_size = batch_size,
+                     epochs = training_epochs,
+                     verbose = 2,
+                     validation_data=(X_cv, y_cv))
