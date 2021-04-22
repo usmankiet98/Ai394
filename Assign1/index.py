@@ -115,3 +115,22 @@ history2a = model2a.fit(X_train, y_train,
                         epochs = training_epochs,
                         verbose = 2,
                         validation_data=(X_cv, y_cv))
+
+Inp = Input(shape=(784,))
+x = Dense(one_hidden_numb, activation='relu', name = "Hidden_Layer_1")(Inp)
+x = Dense(two_hidden_numb, activation='relu', name = "Hidden_Layer_2")(x)
+x = Dense(three_hidden_numb, activation='relu', name = "Hidden_Layer_3")(x)
+x = Dense(four_hidden_numb, activation='relu', name = "Hidden_Layer_4")(x)
+output = Dense(digits_count, activation='softmax', name = "Output_Layer")(x)
+
+learning_rate = 0.5
+adam = keras.optimizers.Adam(lr=learning_rate)
+model2b = Model(Inp, output)
+
+model2b.compile(loss='categorical_crossentropy',
+              optimizer='adam',
+              metrics=['accuracy'])
+history_two_b = model2b.fit(X_train, y_train,
+                        batch_size = batch_size,
+                        epochs = training_epochs,
+                            validation_data=(X_cv, y_cv))
