@@ -88,3 +88,16 @@ model2 = Model(Inp, output)
 model2.compile(loss='categorical_crossentropy',
               optimizer='adam',
               metrics=['accuracy'])
+
+history2 = model2.fit(X_train, y_train,
+                      batch_size = batch_size,
+                      epochs = training_epochs,
+                      verbose = 2,
+                      validation_data=(X_cv, y_cv))
+
+Inp = Input(shape=(784,))
+x = Dense(one_hidden_numb, activation='relu', name = "Hidden_Layer_1")(Inp)
+x = Dense(two_hidden_numb, activation='relu', name = "Hidden_Layer_2")(x)
+x = Dense(three_hidden_numb, activation='relu', name = "Hidden_Layer_3")(x)
+x = Dense(four_hidden_numb, activation='relu', name = "Hidden_Layer_4")(x)
+output = Dense(digits_count, activation='softmax', name = "Output_Layer")(x)
