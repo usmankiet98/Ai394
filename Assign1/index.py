@@ -101,3 +101,17 @@ x = Dense(two_hidden_numb, activation='relu', name = "Hidden_Layer_2")(x)
 x = Dense(three_hidden_numb, activation='relu', name = "Hidden_Layer_3")(x)
 x = Dense(four_hidden_numb, activation='relu', name = "Hidden_Layer_4")(x)
 output = Dense(digits_count, activation='softmax', name = "Output_Layer")(x)
+
+learning_rate = 0.01
+adam = keras.optimizers.Adam(lr=learning_rate)
+model2a = Model(Inp, output)
+
+model2a.compile(loss='categorical_crossentropy',
+              optimizer='adam',
+              metrics=['accuracy'])
+
+history2a = model2a.fit(X_train, y_train,
+                        batch_size = batch_size,
+                        epochs = training_epochs,
+                        verbose = 2,
+                        validation_data=(X_cv, y_cv))
