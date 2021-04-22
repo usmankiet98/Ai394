@@ -40,3 +40,21 @@ y_cv = keras.utils.to_categorical(y_cv, digits_count)
 
 print(y_train[0]) # 2
 print(y_train[3]) # 7
+
+#Features Count
+number_input = 784 
+one_hidden_numb = 300
+two_hidden_numb = 100
+three_hidden_numb = 100
+four_hidden_numb = 200
+digits_count = 10
+
+Inp = Input(shape=(784,))
+x = Dense(one_hidden_numb, activation='relu', name = "Hidden_Layer_1")(Inp)
+x = Dense(two_hidden_numb, activation='relu', name = "Hidden_Layer_2")(x)
+x = Dense(three_hidden_numb, activation='relu', name = "Hidden_Layer_3")(x)
+x = Dense(four_hidden_numb, activation='relu', name = "Hidden_Layer_4")(x)
+output = Dense(digits_count, activation='softmax', name = "Output_Layer")(x)
+
+model = Model(Inp, output)
+model.summary()
