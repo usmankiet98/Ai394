@@ -1,4 +1,4 @@
-### PROJECT MEMBERS
+## PROJECT MEMBERS
 StdID | Name
 ------------ | -------------
 **61293** | **Mohammad Zain Khan**
@@ -6,13 +6,13 @@ StdID | Name
 
 ## PROBLEMS FACES
 
-### Problem 1: 
+## Problem 1: 
 Finding Python version compatible with all required libraries.
 
-### Problem 2: 
+## Problem 2: 
 Sometimes project was taking too much longer in execution, then boom error occurred.
 
-### Problem 4:
+## Problem 4:
 Finding solutions for the problems occurring was too much hard, But it wasn't impossible we found solutions of our mysteries on StackOverFlow and on some other platforms.  
 
 ## APPROACHES
@@ -73,22 +73,22 @@ Results for SVM:
 * 9X9 Weighted 0.71
 * 9X9 UnWeighted 0.73
 
-###9X9 KNN UnWeighted
+##9X9 KNN UnWeighted
 ![9x9_unweighted_knn](https://raw.githubusercontent.com/usmankiet98/Ai394/main/Project/assets/unweighted-kmm-9x9.jpg)
 
-###5X5 Linear Regression UnWeighted
+##5X5 Linear Regression UnWeighted
 ![linear_regression_9x9_unwei](https://raw.githubusercontent.com/usmankiet98/Ai394/main/Project/assets/linear-regression-5x5-unweighted.jpg)
 
-###9X9 Unweighted Multinomial
+##9X9 Unweighted Multinomial
 ![unwei_multinomial_9x9](https://raw.githubusercontent.com/usmankiet98/Ai394/main/Project/assets/unweighted-multinomial-9x9.jpg)
 
-###5X5 UnWeighted
+##5X5 UnWeighted
 ![accuracy_image](https://raw.githubusercontent.com/usmankiet98/Ai394/main/Project/assets/Screenshot-1.jpg)
 
-### Accuracy
+## Accuracy
 0.97060 Accuracy / 42000 on 5x5 SVM UnWeighted Filter
 
-###Accuracy Screenshot
+##Accuracy Screenshot
 ![output image](https://raw.githubusercontent.com/usmankiet98/Ai394/main/Project/assets/Screenshot-1.jpg)
 
 ## References & Helpful links we found
